@@ -14,5 +14,6 @@ public class OAuthTest {
     @Test
     public void main() {
         System.out.println(new BCryptPasswordEncoder().encode("secret"));
+        System.out.println(new BCryptPasswordEncoder().encode("123456"));
     }
 }

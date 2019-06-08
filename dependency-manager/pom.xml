@@ -12,6 +12,9 @@
 
     <properties>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <mybatisPlus.version>3.1.0</mybatisPlus.version>
+        <hikaricp.version>3.3.1</hikaricp.version>
+        <mysql.version>5.1.46</mysql.version>
     </properties>
 
     <licenses>
@@ -59,6 +62,15 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisPlus.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -78,6 +90,18 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
+        </repository>
+        <repository>
+        <id>maven-ali</id>
+        <url>http://maven.aliyun.com/nexus/content/groups/public//</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>fail</checksumPolicy>
+        </snapshots>
         </repository>
     </repositories>
 
